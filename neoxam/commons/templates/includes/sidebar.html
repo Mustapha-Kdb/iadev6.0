@@ -1,0 +1,57 @@
+{% load static %}
+
+{% comment %} {% load i18n static admin_datta %} {% endcomment %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/image.css' %}">
+</head>
+
+
+<nav class="pcoded-navbar">
+  <div class="navbar-wrapper">
+    <div class="navbar-brand header-logo">
+      <a class="b-brand">
+        <img src="{% static 'assets/images/logo-nx.png' %}" alt="logo-nx" class="nx-image">
+      </a>
+    </div>
+    <div class="navbar-content scroll-div">
+      <ul class="nav pcoded-inner-navbar">
+       
+
+     
+        <li class="nav-item pcoded-menu-caption">
+          <label>Menu</label>
+        </li>
+        <li
+          data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds"
+          class="nav-item pcoded-hasmenu {% if 'basic_components' in parent %}active pcoded-trigger{% endif %}">
+          <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
+                class="feather icon-box"></i></span><span class="pcoded-mtext">GP3</span></a>
+       
+        </li>
+
+
+        <li
+        data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds"
+        class="nav-item pcoded-hasmenu {% if 'factory' in request.get_full_path %}active pcoded-trigger{% endif %}">
+        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
+              class="feather icon-box"></i></span><span class="pcoded-mtext">GP4</span></a>
+        <ul class="pcoded-submenu">
+          <li class="{% if 'batches' in request.get_full_path %}active{% endif %}"><a href="{% url 'factory-batches' %}" >Batch History</a></li>
+          {% comment %} <li class=""><a href="{% url 'bc_button' %}" class="">Compilation History</a></li> {% endcomment %}
+          <li class="{% if 'new-batch' in request.get_full_path %}active{% endif %}"><a href="{% url 'factory-new-batch' %}" class="">New Compilation</a></li>
+          <li class="{% if '/factory/trads/' in request.get_full_path %}active{% endif %}"><a href="{% url 'factory-trads' %}" class="">Download translation</a></li>
+          <li class="{% if 'factory/upload-trads' in request.get_full_path %}active{% endif %}"><a href="{% url 'factory-uplpoad-trads' %}" class="">Upload translation</a></li>
+        </ul>
+      </li>
+        
+       
+      
+        {% comment %} <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds"
+         class=""><a href="javascript:" class="nav-link"><span class="pcoded-micon"><i class="feather icon-power"></i>
+        </span><span class="pcoded-mtext">Logout</span></a>
+        </li> {% endcomment %}
+        
+      </ul>
+    </div>
+  </div>
+</nav>

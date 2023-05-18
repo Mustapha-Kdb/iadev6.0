@@ -1,0 +1,53 @@
+{% extends "commons/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header" style="display:flex;justify-content:space-between">
+            <h5>GP4</h5>
+          </div>
+          <div class="card-body">
+            <div class="text-center mb-4">
+              <h4>New Compile</h4>
+            </div>
+          <form action="." method="post" >
+            {% csrf_token %}
+
+                
+
+                <div class="form-group row">
+                    <label for="name" class="col-md-3 col-form-label text-md-right">Name :</label>
+                    <div class="col-md-6">
+                      <input class="form-control form-control-lg"  id="name" type="text" name="name" placeholder="Type Name"></input>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="procedure_names" class="col-md-3 col-form-label text-md-right">Procedure names :</label>
+                    <div class="col-md-6">
+                        <textarea class="form-control form-control-lg" rows="10" id="procedure_names" name="procedure_names"  rows="4" cols="50" placeholder="Type procedure Names"></textarea>
+                        <small id="emailHelp" class="form-text text-muted">Use comma or return to ligne as separator</small>
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="comment" class="col-md-3 col-form-label text-md-right">Comment :</label>
+                    <div class="col-md-6">
+                      <textarea class="form-control form-control-lg"  id="comment" type="text" rows="4"  name="comment" placeholder="Type more details about the batch"></textarea>
+                    </div>
+                </div>
+            
+    
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary" style="background-color: #1DE9B6; border-color: #1DE9B6; border-radius: 20px;">Compile Batch</button>
+                      </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+{% endblock content %}

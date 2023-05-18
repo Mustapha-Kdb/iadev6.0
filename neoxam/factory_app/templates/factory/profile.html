@@ -1,0 +1,77 @@
+{% extends 'commons/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <!-- [ Main Content ] start -->
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-header">
+          <h5>Edit Info</h5>
+        </div>
+        <div class="card-block">
+          <div class="row" style="padding:20px;">
+            <div class="col-sm-12 mb-4">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1"
+                  aria-describedby="emailHelp" placeholder="" value="{{email}}">
+                
+              </div>
+            </div>
+            <div class="col-sm-6 mb-4">
+              <div class="form-group">
+                <label for="fn">First Name</label>
+                <input type="text" class="form-control" id="fn" aria-describedby="emailHelp"
+                  placeholder="No First Name found !">
+              </div>
+            </div>
+            <div class="col-sm-6 mb-4">
+              <div class="form-group">
+                <label for="ln">Last Name</label>
+                <input type="text" class="form-control" id="ln" aria-describedby="emailHelp"
+                  placeholder="No Last Name found ! ">
+              </div>
+            </div>
+            <div class="col-sm-12 mb-4">
+              <div class="form-group">
+                <label for="add">Username</label>
+                <input type="email" class="form-control" id="add" aria-describedby="emailHelp"
+                  placeholder="" value="{{ username }}">
+                <small id="addd" class="form-text text-muted">This is your appearent username</small>
+              </div>
+            </div>
+            
+            {% comment %} <div class="form-group text-center mx-auto">
+              <button type="submit" class="btn btn-primary" style="background-color: #1DE9B6; border-color: #1DE9B6; border-radius: 20px;">Save changes</button>
+            </div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-block">
+          <div class="d-flex align-items-center justify-content-center flex-column">
+            <div class="w-50 p-3">
+              
+                <img src="https://static.vecteezy.com/system/resources/previews/012/911/441/non_2x/default-avatar-profile-icon-in-line-style-vector.jpg" alt="profile image" class="img-fluid rounded-circle">
+
+            </div>
+            <div class="text-center">
+              <h4 class="font-weight-bold h6">{{ username }}</h4>
+            </div>
+          </div>
+
+          <div class="small font-weight-light mt-4 text-center text-muted">
+            <p>Welcome to your profile.</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ Main Content ] end -->
+
+ {% endblock content %}

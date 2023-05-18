@@ -1,0 +1,16 @@
+.nx-image {
+    width: 200px;
+    height: 45px;
+    margin-top: 10px;
+  }
+
+  .test{
+    background: red;
+  width: 65px;
+  display: inline-block;
+  text-align: center;
+  height: 25px;
+  margin-right: 5px;
+  padding-top: 1px;
+  border-radius: 25px;
+  }
